@@ -1,0 +1,8 @@
+#define ENDL '\n'
+#define WIDE_ENDL 10c
+
+func print(const &Char);
+func read(Int, &Char);
+
+func wputchar(WideChar);
+func wprint(const &WideChar);

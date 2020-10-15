@@ -1,0 +1,19 @@
+#define POSIX_BLACK_VAL 30
+#define POSIX_RED_VAL 31
+#define POSIX_GREEN_VAL 32
+#define POSIX_YELLOW_VAL 33
+#define POSIX_BLUE_VAL 34
+#define POSIX_MAGENGA_VAL 35
+#define POSIX_CYAN_VAL 36
+#define POSIX_WHITE_VAL 37
+
+#define POSIX_BLACK "\e[30m"
+#define POSIX_RED "\e[31m"
+#define POSIX_GREEN "\e[32m"
+#define POSIX_YELLOW "\e[33m"
+#define POSIX_BLUE "\e[34m"
+#define POSIX_MAGENGA "\e[35m"
+#define POSIX_CYAN "\e[36m"
+#define POSIX_WHITE "\e[37m"
+
+#define POSIX_RESET "\e[0;0m"

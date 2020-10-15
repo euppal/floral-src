@@ -1,0 +1,18 @@
+using C;
+
+func malloc(UInt): &Void;
+func free(&Void);
+
+func strcpy(&Char, const &Char);
+func strncpy(&Char, const &Char, Int);
+func strcat(&Char, const &Char);
+func strncat(&Char, const &Char, Int);
+func strcmp(&Char, const &Char): Int;
+func strncmp(&Char, const &Char, Int): Int;
+
+#define stdin 0
+#define stdout 1
+#define stderr 2
+
+func putchar(Char);
+func fflush(Int);

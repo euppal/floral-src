@@ -1,0 +1,13 @@
+func syscall_write(
+    fd: Int,
+    buf: const &Char,
+    n: Int
+);
+
+func syscall_exit(code: Int);
+
+func syscall_read(
+    fd: Int,
+    buffer: &Char,
+    n: Int
+)

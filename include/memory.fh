@@ -1,0 +1,2 @@
+func alloc(UInt, UInt): &Void;
+func dealloc(&Void);
