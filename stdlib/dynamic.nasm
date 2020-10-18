@@ -3,8 +3,8 @@ section .text
 extern _malloc
 extern _free
 
-global _floralid_alloc_u_u
-_floralid_alloc_u_u:
+global _floralid_alloc_i_i
+_floralid_alloc_i_i:
   imul rdi, rsi
   jmp _malloc
 

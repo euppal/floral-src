@@ -1,2 +1,2 @@
-func alloc(UInt, UInt): &Void;
+func alloc(Int, Int): &Void;
 func dealloc(&Void);
