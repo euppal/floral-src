@@ -12,7 +12,7 @@
 #define POSIX_GREEN "\e[32m"
 #define POSIX_YELLOW "\e[33m"
 #define POSIX_BLUE "\e[34m"
-#define POSIX_MAGENGA "\e[35m"
+#define POSIX_MAGENTA "\e[35m"
 #define POSIX_CYAN "\e[36m"
 #define POSIX_WHITE "\e[37m"
 

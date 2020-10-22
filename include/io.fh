@@ -1,13 +1,14 @@
 #include <colorcodes.fh>
 
 #define ENDL '\n'
-#define WIDE_ENDL 10c
+#define WIDE_ENDL W'\n'
 
 func print(const &Char);
 func read(Int, &Char);
 
 func wputchar(WideChar);
 func wprint(const &WideChar);
+func wread(Int, &WideChar);
 
 func coloredprint(const &Char, const &Char);
 func coloredwprint(const &Char, const &WideChar);

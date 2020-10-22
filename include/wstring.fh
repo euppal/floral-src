@@ -1,0 +1,2 @@
+func wstrlen(const &WideChar): Int;
+func strtowstr(&WideChar, const &Char);

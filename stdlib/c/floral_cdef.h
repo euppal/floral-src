@@ -16,6 +16,7 @@
 #define _floralmacro__cat(a, b) a ## b
 #define _floralmacro_cat(a, b) _floralmacro__cat(a, b)
 #define FloralTypeIDSuffixBuilder(a, b) _floralmacro_cat(_floralmacro_cat(a, _), b)
+#define FloralIDn(name) _floralmacro_cat(floralid_, name)
 #define FloralID(name, types) _floralmacro_cat(_floralmacro_cat(_floralmacro_cat(floralid_, name), _), types)
 
 #define _floralmacro__paste(x) x
