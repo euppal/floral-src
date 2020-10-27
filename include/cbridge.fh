@@ -4,23 +4,27 @@ func malloc(UInt): &Void;
 func free(&Void);
 
 func memset(&Void, Int32, Int): &Void;
-func memchr(const &Void, Int, Int): &Void;
-func memcmp(const &Void, const &Void, Int): Int32;
+func memchr(&const Void, Int, Int): &Void;
+func memcmp(&const Void, &const Void, Int): Int32;
 func memcpy(&Void, Int, Int): &Void;
 func memmove(&Void, Int, Int): &Void;
 
-func strcpy(&Char, const &Char);
-func strncpy(&Char, const &Char, Int);
-func strcat(&Char, const &Char);
-func strncat(&Char, const &Char, Int);
-func strcmp(&Char, const &Char): Int;
-func strncmp(&Char, const &Char, Int): Int;
-func strchr(const &Char, Char): &Char;
+func strcpy(&Char, &const Char);
+func strncpy(&Char, &const Char, Int);
+func strcat(&Char, &const Char);
+func strncat(&Char, &const Char, Int);
+func strcmp(&Char, &const Char): Int;
+func strncmp(&Char, &const Char, Int): Int;
+func strchr(&const Char, Char): &Char;
 
 #define stdin 0
 #define stdout 1
 #define stderr 2
 
+#define C_char Char
+#define C_short Short
+#define C_int Int32
+#define C_long Int
 #define C_size_t UInt
 
 #define NULL 0u
@@ -31,8 +35,8 @@ func getchar(): const Char;
 func fflush(Int);
 func fdopen(Int): &Void;
 func fgetc(Int): const Char;
-func fputc(const Char, Int);
-func fgets(&Char, Int, Int);
-func fputs(const &Char, Int);
+func fputc(const Char, &Void);
+func fgets(&Char, Int, &Void);
+func fputs(&const Char, &Void);
 func gets(&Char);
-func puts(const &Char);
+func puts(&const Char);

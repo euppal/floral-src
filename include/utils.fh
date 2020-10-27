@@ -1,1 +1,3 @@
 func itoa(Int, &Char);
+func swap8(&Void, &Void);
+func intmap(n: Int, a: Int, b: Int, x: Int, y: Int): Int;

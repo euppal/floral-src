@@ -155,18 +155,24 @@ _floralid_fdopen_i:
 
 global _floralid_fgetc_i
 _floralid_fgetc_i:
+    lea rsi, [rel _floralid_#_FD_PERMS_MAP]
+    lea rsi, [rsi+rdi*2]
+    sub rsp, 8
+    call _fdopen
+    add rsp, 8
+    mov rdi, rax
     jmp _fgetc
 
 global _floralid_fputc_i_u
-_floralid_fputc_i:
+_floralid_fputc_i_u:
     jmp _fputc
 
-global _floralid_fgets_u_i_i
-_floralid_fgets_u_i_i:
+global _floralid_fgets_u_i_u
+_floralid_fgets_u_i_u:
     jmp _fgets
 
-global _floralid_fputs_u_i
-_floralid_fputs_u_i:
+global _floralid_fputs_u_u
+_floralid_fputs_u_u:
     jmp _fputs
 
 global _floralid_gets_u

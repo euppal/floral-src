@@ -1,17 +1,20 @@
 #include <colorcodes.fh>
 
-#define ENDL '\n'
-#define WIDE_ENDL W'\n'
+#define ENDL 10b
+#define WIDE_ENDL 10c
 
-func print(const &Char);
+func print(&const Char);
 func read(Int, &Char);
 
+func flush();
+func print_buffered(&const Char);
+
 func wputchar(WideChar);
-func wprint(const &WideChar);
+func wprint(&const WideChar);
 func wread(Int, &WideChar);
 
-func coloredprint(const &Char, const &Char);
-func coloredwprint(const &Char, const &WideChar);
+func coloredprint(&const Char, &const Char);
+func coloredwprint(&const Char, &const WideChar);
 
-func colored256print(Int, const &Char);
-func colored256wprint(Int, const &WideChar);
+func colored256print(Int, &const Char);
+func colored256wprint(Int, &const WideChar);

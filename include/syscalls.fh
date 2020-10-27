@@ -1,6 +1,6 @@
 func syscall_write(
     fd: Int,
-    buf: const &Char,
+    buf: &const Char,
     n: Int
 );
 

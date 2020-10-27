@@ -8,10 +8,10 @@ _floralid_wmakeupper_u.loophead:
     cmovb edx, eax
     cmp esi, 122
     cmova edx, eax
-    sub esi, edx
+    sub dword [rdi], edx
     add rdi, 4
     cmp esi, 0
-    jnz _floralid_makeupper_u.loophead
+    jnz _floralid_wmakeupper_u.loophead
     ret
 
 global _floralid_wmakelower_u
@@ -24,7 +24,7 @@ _floralid_wmakelower_u.loophead:
     cmovb edx, eax
     cmp esi, 96
     cmova edx, eax
-    add esi, edx
+    add dword [rdi], edx
     add rdi, 4
     cmp esi, 0
     jnz _floralid_wmakelower_u.loophead
