@@ -13,6 +13,7 @@
 #define FloralTypeIDUInt u
 #define FloralTypeIDPointer u
 #define FloralTypeIDInt i
+#define FloralTypeIDVariadic v
 #define _floralmacro__cat(a, b) a ## b
 #define _floralmacro_cat(a, b) _floralmacro__cat(a, b)
 #define FloralTypeIDSuffixBuilder(a, b) _floralmacro_cat(_floralmacro_cat(a, _), b)

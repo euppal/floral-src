@@ -1,6 +1,7 @@
 using C;
 
 func malloc(UInt): &Void;
+func realloc(&Void, UInt): &Void;
 func free(&Void);
 
 func memset(&Void, Int32, Int): &Void;
@@ -21,22 +22,23 @@ func strchr(&const Char, Char): &Char;
 #define stdout 1
 #define stderr 2
 
-#define C_char Char
-#define C_short Short
-#define C_int Int32
-#define C_long Int
-#define C_size_t UInt
+type C_char = Char;
+type C_short = Short;
+type C_int = Int32;
+type C_long = Int;
+type C_size_t = UInt;
+type C_FILE_PTR = &Void;
 
-#define NULL 0u
-#define EOF -1
+global C_NULL: &Void();
+global C_EOF: C_int = -1d;
 
 func putchar(const Char);
 func getchar(): const Char;
 func fflush(Int);
-func fdopen(Int): &Void;
-func fgetc(Int): const Char;
-func fputc(const Char, &Void);
-func fgets(&Char, Int, &Void);
-func fputs(&const Char, &Void);
+func fdopen(Int): C_FILE_PTR;
+func fgetc(C_FILE_PTR): const Char;
+func fputc(const Char, C_FILE_PTR);
+func fgets(&Char, Int, C_FILE_PTR);
+func fputs(&const Char, C_FILE_PTR);
 func gets(&Char);
 func puts(&const Char);

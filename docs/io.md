@@ -2,7 +2,7 @@
 
 There are various ways to do input and output operations in Floral. The most obvious is to use the Floral STL functions. These can be found in the io header.
 
-Functions for null-terminated ascii strings include:
+Functions for null-terminated (asciiz) strings include:
 ```swift
 func print(const &Char);
 func print_buffered(const &Char);
@@ -11,7 +11,7 @@ func coloredprint(const &Char, const &Char);
 func colored256print(Int, const &Char);
 ```
 
-Functions for null-terminated utf32 strings include:
+Functions for null-terminated utf-32 strings include:
 ```swift
 func wread(Int, &WideChar);
 func wputchar(WideChar);
@@ -19,6 +19,8 @@ func wprint(const &WideChar);
 func coloredwprint(const &Char, const &WideChar);
 func colored256wprint(Int, const &WideChar);
 ```
+
+> You can read more about the color-related functions [here](colored-io.md).
 
 One alternative to the Floral STL I/O is to use bridged C functions such as `getchar` and `puts`. This can be done by including the proper header or manually by placing the `using C` directive and forward-declaring the necessary functions.
 

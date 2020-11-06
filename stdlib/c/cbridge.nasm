@@ -4,11 +4,16 @@
 ; Memory functions
 
 extern _malloc
+extern _realloc
 extern _free
 
 global _floralid_malloc_i
 _floralid_malloc_i:
     jmp _malloc
+
+global _floralid_realloc_u_i
+_floralid_realloc_u_i:
+    jmp _realloc
 
 global _floralid_free_u
 _floralid_free_u:
@@ -153,14 +158,8 @@ global _floralid_fdopen_i
 _floralid_fdopen_i:
     jmp _fdopen
 
-global _floralid_fgetc_i
-_floralid_fgetc_i:
-    lea rsi, [rel _floralid_#_FD_PERMS_MAP]
-    lea rsi, [rsi+rdi*2]
-    sub rsp, 8
-    call _fdopen
-    add rsp, 8
-    mov rdi, rax
+global _floralid_fgetc_u
+_floralid_fgetc_u:
     jmp _fgetc
 
 global _floralid_fputc_i_u
