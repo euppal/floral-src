@@ -10,5 +10,16 @@ _floralid_print_u:
   mov rcx, rdi ; save str
   mov rdi, 1 ; argument 1 (1 = stdout)
   mov rdx, rax ; argument 3 (str length)
-  call _floralid_syscall_write_i_u_i ; call function
-  ret ; return from function
+  jmp _floralid_syscall_write_i_u_i ; tail call function
+
+global _floralid_print_ch
+_floralid_print_ch:
+  dec rsp
+  mov byte [rsp], dil
+  mov edi, 1
+  mov rsi, rsp
+  mov edx, 1
+  mov eax, 0x2000004
+  syscall
+  inc rsp
+  ret

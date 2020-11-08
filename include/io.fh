@@ -4,6 +4,11 @@
 #define WIDE_ENDL 10c
 
 func print(&const Char);
+func print(const Char);
+func print(Int64);
+func print(Int32);
+func print(Int16);
+func print(Bool);
 func read(Int, &Char);
 
 func flush();
