@@ -1,25 +1,25 @@
 #include <colorcodes.fh>
 
-#define ENDL 10b
-#define WIDE_ENDL 10c
+namespace std {
+    #define endl 10b
 
-func print(&const Char);
-func print(const Char);
-func print(Int64);
-func print(Int32);
-func print(Int16);
-func print(Bool);
-func read(Int, &Char);
+    func read(Int, &Char);
 
-func flush();
-func print_buffered(&const Char);
+    func print(&const Char);
+    func print(const Char);
+    func println(&const Char);
+    func flush();
 
-func wputchar(WideChar);
-func wprint(&const WideChar);
-func wread(Int, &WideChar);
+    func print_unbuffered(&const Char);
+    func println_unbuffered(&const Char);
+    func print_unbuffered(const Char);
 
-func coloredprint(&const Char, &const Char);
-func coloredwprint(&const Char, &const WideChar);
+    func print(Int64);
+    func print(Int32);
+    func print(Int16);
+    func print(Bool);
 
-func colored256print(Int, &const Char);
-func colored256wprint(Int, &const WideChar);
+    #define in_fd  0
+    #define out_fd 1
+    #define err_fd 2
+}

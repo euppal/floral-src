@@ -1,44 +1,52 @@
 using C;
 
-func malloc(UInt): &Void;
-func realloc(&Void, UInt): &Void;
-func free(&Void);
+namespace libc {
+    func malloc(UInt): &Void;
+    func realloc(&Void, UInt): &Void;
+    func free(&Void);
 
-func memset(&Void, Int32, Int): &Void;
-func memchr(&const Void, Int, Int): &Void;
-func memcmp(&const Void, &const Void, Int): Int32;
-func memcpy(&Void, Int, Int): &Void;
-func memmove(&Void, Int, Int): &Void;
+    func memset(&Void, Int32, Int): &Void;
+    func memchr(&const Void, Int, Int): &Void;
+    func memcmp(&const Void, &const Void, Int): Int32;
+    func memcpy(&Void, Int, Int): &Void;
+    func memmove(&Void, Int, Int): &Void;
 
-func strcpy(&Char, &const Char);
-func strncpy(&Char, &const Char, Int);
-func strcat(&Char, &const Char);
-func strncat(&Char, &const Char, Int);
-func strcmp(&Char, &const Char): Int;
-func strncmp(&Char, &const Char, Int): Int;
-func strchr(&const Char, Char): &Char;
+    func strcpy(&Char, &const Char);
+    func strncpy(&Char, &const Char, Int);
+    func strcat(&Char, &const Char);
+    func strncat(&Char, &const Char, Int);
+    func strcmp(&Char, &const Char): Int;
+    func strncmp(&Char, &const Char, Int): Int;
+    func strchr(&const Char, Char): &Char;
 
-#define stdin 0
-#define stdout 1
-#define stderr 2
+    #define STDIN_FILENO 0
+    #define STDOUT_FILENO 1
+    #define STDERR_FILENO 2
 
-type C_char = Char;
-type C_short = Short;
-type C_int = Int32;
-type C_long = Int;
-type C_size_t = UInt;
-type C_FILE_PTR = &Void;
+    type char = Int8;
+    type short = Int16;
+    type int = Int32;
+    type long = Int64;
+    type unsigned_char = UInt8;
+    type unsigned_short = UInt16;
+    type unsigned_int = UInt32;
+    type unsigned_long = UInt64;
+    type size_t = Int;
+    type user_size_t = Int;
+    type user_ssize_t = Int;
+    type user_addr_t = &Char;
 
-global C_NULL: &Void();
-global C_EOF: C_int = -1d;
+    global NULL: &Void();
+    global EOF: C_int = -1d;
 
-func putchar(const Char);
-func getchar(): const Char;
-func fflush(Int);
-func fdopen(Int): C_FILE_PTR;
-func fgetc(C_FILE_PTR): const Char;
-func fputc(const Char, C_FILE_PTR);
-func fgets(&Char, Int, C_FILE_PTR);
-func fputs(&const Char, C_FILE_PTR);
-func gets(&Char);
-func puts(&const Char);
+    func putchar(const Char);
+    func getchar(): const Char;
+    func fflush(&Void);
+    func fdopen(Int): &Void;
+    func fgetc(&Void): const Char;
+    func fputc(const Char, &Void);
+    func fgets(&Char, Int, &Void);
+    func fputs(&const Char, &Void);
+    func gets(&Char);
+    func puts(&const Char);
+}

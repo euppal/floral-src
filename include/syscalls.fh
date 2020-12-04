@@ -1,13 +1,13 @@
-func syscall_write(
-    fd: Int,
-    buf: &const Char,
-    n: Int
-);
-
-func syscall_exit(code: Int);
-
-func syscall_read(
-    fd: Int,
-    buffer: &Char,
-    n: Int
-);
+namespace syscall {
+    global O_RDONLY = 0;
+    global O_WRONLY = 1;
+    global O_RDWR = 2;
+    global O_CREAT = 512;
+    global O_APPEND = 8;
+    func exit(code: Int);
+    func fork();
+    func read(fd: Int, buffer: &Char, n: Int): Int;
+    func write(fd: Int, buf: &const Char, n: Int): Int;
+    func open(path: &const Char, flags: Int, mode: Int): Int;
+    func close(fd: Int): Int;
+}

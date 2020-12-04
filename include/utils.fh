@@ -1,3 +1,7 @@
-func itoa(Int, &Char);
-func swap8(&Void, &Void);
-func intmap(n: Int, a: Int, b: Int, x: Int, y: Int): Int;
+#define identity(x) (x)
+
+namespace std {
+    func itoa(Int, &Char);
+    func byte_swap(&Void, &Void);
+    func qword_swap(&Void, &Void);
+}

@@ -1,2 +1,10 @@
-func alloc(Int, Int): &Void;
-func dealloc(&Void);
+namespace std {
+    func alloc(Int64, Int64): &Void;
+    func free(&Void);
+
+    // Reverse the `length` bytes of `buffer`
+    func reverse(&Void, Int);
+    
+    // Swaps `length` bytes between `first_buffer` and `second_buffer`
+    func exchange(&Void, &Void, Int);
+}

@@ -1,4 +1,0 @@
-func wstrlen(&const WideChar): Int;
-func strtowstr(&WideChar, &const Char);
-func wmakeupper(&WideChar);
-func wmakelower(&WideChar);

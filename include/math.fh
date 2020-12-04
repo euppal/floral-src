@@ -1,0 +1,6 @@
+namespace std {
+    func abs(Int64);
+    func abs(Int32);
+    func pow(Int64, Int64): Int64
+    func intmap(n: Int64, a: Int64, b: Int64, x: Int64, y: Int64): Int64;
+}
